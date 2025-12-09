@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kapica Sayang 💌</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    
+    <div class="main-container">
+
+        <div class="audio-player-box">
+            <p>🎧 Klik Play Lagu Spesial Ini Dulu Ya, Kapica! 💖</p>
+            <audio id="lanyPlayer" controls loop style="width: 90%; margin-top: 10px;">
+                <source src="lany_maaf.mp3" type="audio/mp3">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+        </div>
+        
+        <h1>💙 Maaf yaa kapica sayangg 💙</h1>
+        <h2>Dari aku, yang cuma bisa jatuh cinta sama kamu berkali-kali</h2>
+        
+        <div class="message-box">
+            <p>
+                Kadang aku salah, dan itu menyakitkanmu. Aku sungguh minta maaf. 
+                <br><br>
+                Setiap kali kamu diam, aku merasa separuh duniaku menghilang. Kamu tahu, kamu itu segalanya bagiku, Kapica.
+                <br><br>
+                <strong>Aku janji akan berusaha lebih baik. Aku akan jadi pendengar yang lebih sabar dan pasangan yang lebih peka.</strong>
+                <br><br>
+                Kamu itu rumah, ketenangan, dan alasan aku senyum tiap pagi. 💫
+                <br><br>
+                Maaf ya kalau aku belum sempurna, tapi aku bakal terus belajar — <strong>buat jadi alasan kamu bahagia.</strong> Aku sayang kamu lebih dari kata-kata ini bisa jelaskan.
+            </p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="button-container">
+            <button id="apologyBtn" class="apology-button">Aku minta maaf sayangg 💞</button>
+        </div>
+
+        <div id="responseArea" class="response-area"></div>
+
+        <div class="heart">💗 💗 💗</div>
+        
+        <p class="caption-text">Dibuat dengan semua cinta dan penyesalan, oleh 'Si Bodoh'-mu yang setia.</p>
+        
+    </div>
+
+    <script>
+        // 1. GENERASI BINTANG (Menggantikan Python Random)
+        const numStars = 50;
+        const body = document.body;
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 5 + 's';
+            body.appendChild(star);
+        }
+
+        // 2. LOGIKA TOMBOL & CONFETTI
+        document.getElementById('apologyBtn').addEventListener('click', function() {
+            // Tampilkan pesan sukses
+            document.getElementById('responseArea').innerHTML = "YESS! Kamu memang yang terbaik! Aku selalu sayang kamu, selamanya 💙";
+            
+            // Efek Confetti (Menggantikan st.balloons)
+            confetti({
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.6 }
+            });
+            
+            // Ganti teks tombol
+            this.textContent = "TERIMA KASIH, KAPICA! 🥰";
+            this.style.backgroundColor = '#ff7eb9'; 
+            this.disabled = true;
+        });
+    </script>
+</body>
+</html>

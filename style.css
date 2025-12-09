@@ -1,0 +1,149 @@
+/* ------------------------------------------- */
+/* 1. Global Setup & Background */
+/* ------------------------------------------- */
+body {
+    background: radial-gradient(circle at top, #0d1b2a 0%, #1b263b 50%, #000814 100%);
+    color: #f0f4ff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.main-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* ------------------------------------------- */
+/* 2. Judul dan Subjudul */
+/* ------------------------------------------- */
+h1 {
+    font-size: 1.8em;
+    color: #9ab6ff;
+    text-shadow: 0px 0px 8px #6b8cff;
+    animation: float 3s ease-in-out infinite;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+h2 {
+    font-size: 1.1em;
+    color: #c7d5ff;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* ------------------------------------------- */
+/* 3. Kotak Pesan & Audio Player */
+/* ------------------------------------------- */
+.audio-player-box {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #1b263b;
+    padding: 10px;
+    border-radius: 10px;
+}
+.audio-player-box p {
+    color: #c7d5ff; 
+    font-weight: bold; 
+    margin: 0;
+    text-align: center;
+}
+
+.message-box {
+    background-color: #0d1b2a;
+    border-left: 5px solid #6b8cff;
+    padding: 20px 15px;
+    border-radius: 12px;
+    margin: 15px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    text-align: left;
+}
+.message-box p {
+    font-size: 1em; 
+    line-height: 1.6em;
+    color: #e3e9ff;
+    text-align: left;
+}
+
+.divider {
+    border-top: 1px solid #1b263b; 
+    margin: 30px 0;
+}
+
+.caption-text {
+    text-align: center; 
+    font-size: 0.8em; 
+    margin-top: 20px; 
+    color: #6b8cff;
+}
+
+.response-area {
+    font-size: 1.1em; 
+    color: #6b8cff; 
+    font-weight: bold;
+}
+
+/* ------------------------------------------- */
+/* 4. Hati Animasi & Tombol */
+/* ------------------------------------------- */
+.heart {
+    color: #ff7eb9;
+    font-size: 35px;
+    animation: pulse 1.5s infinite;
+    margin-top: 20px;
+    margin-bottom: 0px; 
+}
+.button-container {
+    padding: 15px 0;
+}
+.apology-button {
+    width: 90%; 
+    background-color: #9ab6ff;
+    color: #0d1b2a; 
+    font-weight: 700;
+    border-radius: 20px; 
+    padding: 15px; 
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+.apology-button:hover {
+    background-color: #6b8cff;
+    color: white;
+}
+
+/* ------------------------------------------- */
+/* 5. Animasi Stars */
+/* ------------------------------------------- */
+.star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+    opacity: 0.7;
+}
+
+/* ------------------------------------------- */
+/* 6. Keyframes */
+/* ------------------------------------------- */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-7px); }
+    100% { transform: translateY(0px); }
+}
+@keyframes twinkle {
+    from {opacity: 0.2;}
+    50% {opacity: 1;}
+    to {opacity: 0.2;}
+}
